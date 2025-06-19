@@ -1,3 +1,5 @@
+
+
 function getComputerChoice() {
     // Randomly return one of the string values
     // rock, paper, scissor 
@@ -13,7 +15,9 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let userChoice = prompt("User: please input rock, paper or scissor: ");
+    // let userChoice = prompt("User: please input rock, paper or scissor: ");
+    const userChoice = document.querySelector("#userChoice");
+    userChoice.addEventListener("click", playRound);
     return userChoice.toLowerCase();
 }
 
@@ -56,6 +60,7 @@ function checkInput(choice) {
 }
 
 function playGame(number) {
+    
     // Initiate score for the game 
     let humanScore = 0;
     let computerScore = 0;
